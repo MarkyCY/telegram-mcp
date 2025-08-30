@@ -52,7 +52,7 @@ TELEGRAM_SESSION_NAME = os.getenv("TELEGRAM_SESSION_NAME")
 # Check if a string session exists in environment, otherwise use file-based session
 SESSION_STRING = os.getenv("TELEGRAM_SESSION_STRING")
 
-mcp = FastMCP("telegram", host="localhost", port=5001)
+mcp = FastMCP("telegram", host="0.0.0.0", port=5001)
 
 if SESSION_STRING:
     # Use the string session if available
